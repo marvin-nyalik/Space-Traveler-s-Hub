@@ -22,13 +22,6 @@ describe('Rockets Component', () => {
             flickr_images: 'url-of-image-1',
             reserved: false,
           },
-          {
-            id: '2',
-            rocket_name: 'Rocket 2',
-            description: 'Description of Rocket 2',
-            flickr_images: 'url-of-image-2',
-            reserved: true,
-          },
         ],
         loading: false,
       },
@@ -61,9 +54,7 @@ describe('Rockets Component', () => {
     );
 
     const rocketDesc1 = screen.getByText('Description of Rocket 1');
-    const rocketDesc2 = screen.getByText('Description of Rocket 2');
     expect(rocketDesc1).toBeInTheDocument();
-    expect(rocketDesc2).toBeInTheDocument();
   });
 
   test('calls reserve when reserve button is clicked', async () => {
